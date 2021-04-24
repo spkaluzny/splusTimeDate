@@ -289,8 +289,9 @@ on the day specified by \code{codeend}, etc. \cr
 }
 }
 \section{References}{
-Daylight savings boundaries and other time zone information was taken from the 
-public-domain time zone library from the ftp://elsie.nci.nih.gov/pub/ ftp site. 
+Daylight savings boundaries and other time zone information are from the
+Time Zone Database (often called tz or zoneinfo).
+See: \url{https://www.iana.org/time-zones}.
 }
 \seealso{
 \code{\link{timeZoneC}}  function, \code{\link{timeZoneR}}  function, \code{\link{timeZoneList}}  function.  

@@ -1,16 +1,12 @@
 Package: splusTimeDate
-Version: 2.5.0-142
-Date: 2019-04-19
+Version: 2.5.1
 Title: Times and Dates from S-PLUS
+Depends: R (>= 2.12.0), methods, stats
+Author: TIBCO Software Inc.
+Maintainer: Stephen Kaluzny <spkaluzny@gmail.com>
 Description: A collection of classes and methods for working with
   times and dates. The code was originally available in S-PLUS.
-Author: TIBCO Software Inc.
-Maintainer: Stephen Kaluzny <skaluzny@tibco.com>
-Depends: R (>= 2.12.0), methods, stats
-LazyData: yes
-BuildResaveData: no
 License: BSD_3_clause + file LICENSE
+URL: https://github.com/spkaluzny/splusTimeDate
+BugReports: https://github.com/spkaluzny/splusTimeDate/issues
 NeedsCompilation: yes
-Repository: CRAN
-Packaged: 2019-04-19 19:00:34 UTC; spk
-Date/Publication: 2019-04-19 20:50:03 UTC
