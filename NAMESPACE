@@ -89,7 +89,9 @@ export(
     timeAlign,
     timeRelative,
     timeSequence,
-    timeSeq
+    timeSeq,
+    .numalign,
+    .timealign
 )
 
 exportClasses(

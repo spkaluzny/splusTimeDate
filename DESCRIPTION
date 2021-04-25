@@ -2,8 +2,13 @@ Package: splusTimeDate
 Version: 2.5.1
 Title: Times and Dates from S-PLUS
 Depends: R (>= 2.12.0), methods, stats
-Author: TIBCO Software Inc.
-Maintainer: Stephen Kaluzny <spkaluzny@gmail.com>
+Authors@R: 
+    c(person(given = "Stephen",
+           family = "Kaluzny",
+           role = c("aut", "cre"),
+           email = "spkaluzny@gmail.com"),
+      person(given = "TIBCO Software Inc.",
+           role=c("aut", "cph")))
 Description: A collection of classes and methods for working with
   times and dates. The code was originally available in S-PLUS.
 License: BSD_3_clause + file LICENSE
