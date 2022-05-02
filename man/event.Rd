@@ -10,12 +10,10 @@ Constructs a \code{timeEvent} object.
 timeEvent(start., end., IDs)
 }
 \arguments{
-  \item{}{
-    The function can be called with no arguments, but if any are  
-    supplied, \code{start.} is required.
-  }
   \item{start.}{
     a time/date object giving start times of events. 
+    The function can be called with no arguments, but if any are  
+    supplied, \code{start.} is required.
   }
   \item{end.}{
     a time/date object giving end times of events.  If missing, defaults to  

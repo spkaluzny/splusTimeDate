@@ -12,10 +12,6 @@ timeDate(charvec, in.format,
          julian, ms, in.origin=c(month=1, day=1, year=1960))
 }
 \arguments{
-  \item{}{
-    One of \code{charvec}, \code{julian}, or \code{ms} must be supplied,
-    unless the function is called with no arguments. 
-    }
     \item{charvec}{
       a character vector to read the times from. 
     }
@@ -46,6 +42,8 @@ timeDate(charvec, in.format,
 returns a \code{timeDate} object derived from the inputs. 
 }
 \details{
+One of \code{charvec}, \code{julian}, or \code{ms} must be supplied,
+unless the function is called with no arguments. 
 \itemize{
 \item If \code{charvec} is supplied, then \code{timeDate} reads the times from the \code{charvec} character strings using the format string from \code{in.format}. 
 This conversion uses the time zone supplied in \code{zone}. 

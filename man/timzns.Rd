@@ -105,21 +105,26 @@ returns a \code{timeZoneR} object with the given name, or the default time zone
 if no arguments are supplied. 
 }
 \details{
+The arguments other than \code{offset} and \code{rules} define the components 
+of the rules for when to go on daylight savings.
+Each is a  vector with one component for each rule. 
+
 The \code{timeZoneR} class provides to users a way to define time zones.  
-To use the defined time zones in \code{timeDate} objects, they must also be added 
-to the time zone list. (See \code{timeZoneList} for more information.) 
+To use the defined time zones in \code{timeDate} objects,
+they must also be added to the time zone list.
+(See \code{timeZoneList} for more information.) 
 }
 \seealso{
-\code{\link{timeZoneList}},  \code{\link{timeZoneC}},  \code{\linkS4class{timeZone}}  class.  
+\code{\link{timeZoneList}}, \code{\link{timeZoneC}}, \code{\linkS4class{timeZone}} class.
 }
 \examples{
-timeZoneR() 
-timeZoneR(offset=3*3600) 
-# time zone with daylight time that changed to daylight time on the  
-# last Sunday in April and last Sunday in September through 1989,  
+timeZoneR()
+timeZoneR(offset=3*3600)
+# time zone with daylight time that changed to daylight time on the 
+# last Sunday in April and last Sunday in September through 1989,
 # and then on the 1st Sunday in May and October thereafter.
 # Each time change occurs at 2AM local standard time.
-timeZoneR( offset = 3600, 
+timeZoneR( offset = 3600,
 		  yearfrom=c( -1, 1990), yearto=c( 1989, -1 ),  
 		  hasdaylight=c( TRUE, TRUE ), dsextra=c( 3600, 3600 ),  
 		  monthstart=c( 4, 5 ), codestart=c( 2, 3 ),  

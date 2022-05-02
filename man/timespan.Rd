@@ -10,11 +10,6 @@ Constructs an object of class \code{timeSpan}.
 timeSpan(charvec, in.format, format, julian, ms)
 }
 \arguments{
-  \item{}{
-    You can call this function with no arguments. If you supply any arguments, 
-    at least one of \code{charvec}, \code{julian}, or \code{ms} must be
-    present. 
-    }
 \item{charvec}{
 the character vector to parse. 
 }
@@ -40,6 +35,8 @@ returns a \code{timeSpan} object constructed from the input. If you provide
 no arguments, returns the default (empty) \code{timeSpan} object. 
 }
 \details{
+You can call this function with no arguments. If you supply any arguments, 
+at least one of \code{charvec}, \code{julian}, or \code{ms} must be present. 
 \itemize{
 \item If \code{charvec} is given, the \code{in.format} is used 
 to parse \code{charvec} into time spans, and the \code{julian} and 

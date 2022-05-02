@@ -10,12 +10,10 @@ Constructor function for \code{groupVec} class objects.
 groupVec(names, classes, columns)
 }
 \arguments{
-  \item{}{
-    The function can be called with no arguments, but if it is called 
-    with any arguments, \code{names} must be supplied.
-    }
   \item{names}{
     the column names for the object. 
+    The function can be called with no arguments, but if it is called 
+    with any arguments, \code{names} must be supplied.
   }
   \item{classes}{
     the column classes for the object.  If not supplied, it is

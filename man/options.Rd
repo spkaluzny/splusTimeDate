@@ -21,14 +21,11 @@ timeDateOptions(...)
 }
 \section{Common options}{
   \describe{
-    \item{}{
-      Use the following option names in a call to
-      \code{timeDateOptions}
-    }
   \item{ts.eps}{
-    a small number specifying the time series comparison tolerance. This is used 
-    throughout the time series functions for frequency comparisons. Frequencies 
-    are considered equal if they differ in absolute value by less than \code{ts.eps}.
+    a small number specifying the time series comparison tolerance.
+    This is used throughout the time series functions for frequency comparisons.
+    Frequencies are considered equal if they differ in absolute value
+    by less than \code{ts.eps}.
 }\item{sequence.tol}{
 a number specifying the tolerance for converting numeric vectors to numeric sequences. 
 If a numeric vector is an arithmetic sequence to within \code{sequence.tol}, it can 
