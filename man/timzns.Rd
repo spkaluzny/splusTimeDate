@@ -16,10 +16,6 @@ timeZoneR(offset=0, yearfrom=integer(0), yearto=integer(0),
           xdayend=integer(0), timeend=integer(0), rules)
 }
 \arguments{
-\item{}{\strong{Note}: The arguments other than \code{offset} and \code{rules} define the components 
-of the rules for when to go on daylight savings.  Each is a  
-vector with one component for each rule. 
-}
 \item{offset}{
 the offset from GMT (in seconds) when not on daylight savings time. 
 }
