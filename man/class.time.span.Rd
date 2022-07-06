@@ -139,7 +139,7 @@ anything not in this list matches itself explicitly.
 \item{\%c}{
 any single character, which is skipped. This can be used with 
 widths and delimiters such as "\%3c" (to skip 3 characters) 
-and "\%\$c" (to skip the rest of the string).
+and "\%$c" (to skip the rest of the string).
 }
 \item{\%d }{
 input number of days as integer.
@@ -180,7 +180,7 @@ character.  The delimiter itself is not scanned or skipped by the
 format.
 }
 \item{\%$(char)}{
-For a \$ between a \% and a specification character,
+For a $ between a \% and a specification character,
 the field goes to the end of the input string.
 }
 \item{whitespace}{

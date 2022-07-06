@@ -128,7 +128,7 @@ anything not in this list matches itself explicitly.
 }
 \item{\%c}{
 any single character, which is skipped. This is useful for skipping entries like days of the week, which, if
-abbreviated, could be skipped by "\%3c" (see also \%w). To skip the rest of the string, use "\%\$c".
+abbreviated, could be skipped by "\%3c" (see also \%w). To skip the rest of the string, use "\%$c".
 }
 \item{\%d}{
 input day, within a month, as integer.
@@ -194,7 +194,7 @@ character.  The delimiter itself is not scanned or skipped by the
 format.
 }
 \item{\%$(char)}{
-If there is a \$ between a \% and a specification character,
+If there is a $ between a \% and a specification character,
 the field goes to the end of the input string.
 }
 \item{whitespace}{
