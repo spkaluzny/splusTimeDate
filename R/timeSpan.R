@@ -28,7 +28,7 @@ timeSpan <- function( charvec, in.format, format, julian, ms )
 
     # read from the character strings
     obj <- .tspan_from_string(charvec, in.format)
-    if( class( obj ) != "timeSpan" )
+    if( ! inherits( obj, "timeSpan" ))
       stop( "Unknown error in calling C function tspan_from_string" )
 
   } else {

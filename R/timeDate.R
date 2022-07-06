@@ -67,7 +67,7 @@ timeDate <- function( charvec, in.format, format, zone, julian, ms,
                  as(charvec, "character"),
                  as(in.format, "character"),
                  defaults, timeZoneList())
-    if( class( obj ) != "timeDate" )
+    if( ! inherits(obj,  "timeDate" )) 
       stop( "Unknown error in calling C function time_from_string" )
 
   } else {
