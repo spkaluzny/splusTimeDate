@@ -27,6 +27,12 @@ extern "C" {
 #define C_ZONE_CLASS_NAME "timeZoneC"
 #define R_ZONE_CLASS_NAME "timeZoneR"
 
+/* Sfloat, Sint added for splusTimeDate_2.5.4 as they will be dropped
+ * from R soon.
+ */
+typedef double Sfloat;
+typedef int Sint;
+
 /**********************************************************************
  * R-DOCUMENTATION ************************************************
  **********************************************************************
