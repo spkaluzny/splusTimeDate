@@ -9,7 +9,7 @@ The code was originally available in S-PLUS.
 
 You can install the latest released version from CRAN with:
 ```r
-installpackages("splusTimeDate")
+install.packages("splusTimeDate")
 ```
 
 Install the latest development version from GitHub with:
