@@ -31,7 +31,7 @@ static const char *DEFAULT_OUT_FORMAT = " ";
 static const char *DEFAULT_ZONE = "GMT";
 
 /* internal functions */
-static void time_init();
+static void time_init(void);
 
 
 /****************************
