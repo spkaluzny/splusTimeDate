@@ -336,7 +336,7 @@ static int out_width( char spec_char )
  **********************************************************************
    NAME output_one
 
-   DESCRIPTION Use sprintf to print out one output spec
+   DESCRIPTION Use snprintf to print out one output spec
 
    ARGUMENTS
       IOARG out_buf      the buffer for printing (set to end of last print)
@@ -367,6 +367,7 @@ static int output_one( char **out_buf, TIME_DATE_STRUCT td,
 {
   Sint print_val;
   int num_chars;
+  size_t n_bytes_remaining = field_width + 1;
 
   if( !out_buf || !(*out_buf ))
     return 0;
@@ -445,7 +446,7 @@ static int output_one( char **out_buf, TIME_DATE_STRUCT td,
 
    if( zero_pad )
    {
-     num_chars = sprintf( *out_buf, "%0*d", field_width, print_val );
+     num_chars = snprintf( *out_buf, n_bytes_remaining, "%0*d", field_width, print_val );
      if( num_chars != field_width ) 
        return 0;
      *out_buf += num_chars;
@@ -454,7 +455,7 @@ static int output_one( char **out_buf, TIME_DATE_STRUCT td,
 
    if( field_width > 0 )
    {
-     num_chars = sprintf( *out_buf, "%*d", field_width, print_val );
+     num_chars = snprintf( *out_buf, n_bytes_remaining, "%*d", field_width, print_val );
      if( num_chars != field_width )
        return 0;
      *out_buf += num_chars;
@@ -462,9 +463,15 @@ static int output_one( char **out_buf, TIME_DATE_STRUCT td,
    }
 
    /* no particular width */
-  num_chars = sprintf( *out_buf, "%d", print_val );
+   /* We assume that the output buffer is big enough, since we haven't been told its size */
+   /* printf("timeSpan: spec_char=%c, field_width=%d\n", spec_char, field_width); */
+  n_bytes_remaining = 250;
+  num_chars = snprintf( *out_buf, n_bytes_remaining, "%d", print_val );
   if( num_chars < 1 )
     return 0;
+  if (num_chars >= n_bytes_remaining){
+    return 0;
+  }
   *out_buf += num_chars;
   return 1;
 }
