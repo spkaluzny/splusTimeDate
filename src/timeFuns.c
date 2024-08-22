@@ -214,7 +214,7 @@ SEXP time_from_string( SEXP char_vec, SEXP format_string,
   if(!isString(format_string) || (lng = length(format_string)) < 1)
     error("problem extracting data from format_string argument in c function time_from_string");
   if( lng > 1 )
-    warning("only the first format string will be used -- ignoring the other %ld elements of second argument to c function time_from_string", lng -1);
+    warning("only the first format string will be used -- ignoring the other %d elements of second argument to c function time_from_string", lng -1);
   in_format = CHAR(STRING_ELT(format_string, 0));
 
   if(!isString(char_vec) || (lng = length(char_vec)) < 1)
@@ -439,7 +439,7 @@ SEXP tspan_from_string( SEXP char_vec,
   if(!isString(format_string) || (lng = length(format_string)) < 1)
     error("problem extracting data from format_string argument in c function tspan_from_string");
   if( lng > 1 )
-    warning("only the first format string will be used -- ignoring the other %ld elements of second argument to c function time_from_string", lng -1);
+    warning("only the first format string will be used -- ignoring the other %d elements of second argument to c function time_from_string", lng -1);
   in_format = CHAR(STRING_ELT(format_string, 0));
 
   if(!isString(char_vec) || (lng = length(char_vec)) < 1)
@@ -804,20 +804,20 @@ SEXP time_from_month_day_index( SEXP month, SEXP wkday,
   if( !wkday || ( lng = length(wkday)) < 1 )
     error( "Problem extracting input data in c function time_from_month_day_index"); 
   if( lng > 1 )
-    warning( "Only the first weekday will be used -- ignoring the other %ld elements of second argument to c function time_from_month_day_index", lng - 1);
+    warning( "Only the first weekday will be used -- ignoring the other %d elements of second argument to c function time_from_month_day_index", lng - 1);
   in_weekday = *INTEGER(wkday);
 
   if( !month || ( lng = length(month)) < 1 )
     error( "Problem extracting input data in c function time_from_month_day_index"); 
   if( lng > 1 )
-    warning( "Only the first weekday will be used -- ignoring the other %ld elements of second argument to c function time_from_month_day_index", lng - 1);
+    warning( "Only the first weekday will be used -- ignoring the other %d elements of second argument to c function time_from_month_day_index", lng - 1);
   in_month = *INTEGER(month);
 
 
   if( !index || ( lng = length(index)) < 1 )
     error( "Problem extracting input data in c function time_from_month_day_index"); 
   if( lng > 1 )
-    warning( "Only the first weekday will be used -- ignoring the other %ld elements of second argument to c function time_from_month_day_index", lng - 1);
+    warning( "Only the first weekday will be used -- ignoring the other %d elements of second argument to c function time_from_month_day_index", lng - 1);
   in_index = *INTEGER(index);
 
   if( !year_vec )
@@ -1441,7 +1441,7 @@ SEXP time_to_zone( SEXP time_vec, SEXP zone,
     error( "Problem extracting data in c function time_to_zone"); 
 
   if( lng > 1 )
-    warning( "Only the first time zone will be used -- ignoring the other %ld elements of second argument to c function time_to zone", lng - 1);
+    warning( "Only the first time zone will be used -- ignoring the other %d elements of second argument to c function time_to zone", lng - 1);
 
   /* convert to RWZone object */
   tzone = find_zone( zonestr, zone_list );
