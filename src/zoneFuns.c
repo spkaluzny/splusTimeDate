@@ -80,7 +80,7 @@ TZONE_STRUCT *find_zone( const char *name, SEXP zone_list )
   
   /* find the zone in the zone list */
   if( !find_zone_info( name, zone_list, &zone_info, &is_R )){
-    warning("Can't find zone info for ", name);
+    warning("Can't find zone info for %s", name);
     return NULL;
   }
 
