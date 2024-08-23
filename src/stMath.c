@@ -1243,9 +1243,11 @@ SEXP time_rel_seq( SEXP start_time, SEXP end_time,
       if( i >= num_alloc - 1 )
       {
 	num_alloc += 200;
-	SETLENGTH( tmp_days, num_alloc );
+	/* SETLENGTH( tmp_days, num_alloc ); */
+  tmp_days = Rf_xlengthgets(tmp_days, num_alloc );
         out_days = INTEGER(tmp_days) ;
-	SETLENGTH( tmp_ms, num_alloc );
+	/* SETLENGTH( tmp_ms, num_alloc ); */
+	tmp_ms = Rf_xlengthgets( tmp_ms, num_alloc );
         out_ms = INTEGER(tmp_ms) ;
       }
     }
