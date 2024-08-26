@@ -47,6 +47,7 @@
   # test math functions
   a <- as( c( -1.2, 3.3 ), "timeDate" )
   b <- as( c( -1.2, 3.3 ), "timeSpan" )
+atU
 
   ( all( timeFloor( a ) == as( c( -2, 3 ), "timeDate" )) &&
     all( timeFloor( b ) == as( c( -2, 3 ), "timeSpan" )) &&
@@ -68,10 +69,12 @@
 }
 
 {
-  atUsesRandom({
   # test basic stats
   a <- c( 1:5, 2, 89 )
-  b <- a + rnorm(7)
+  # b <- a + rnorm(7)
+  # above b with set.seed(42):
+  b <- c(2.37095844714667, 1.43530182860391, 3.36312841133734,
+    4.63286260496104, 5.404268323141, 1.89387548390852, 90.5115219974389)
   ( all( mean( as( a, "timeDate" )) == as( mean( a ), "timeDate" )) &&
     all( mean( as( a, "timeSpan" )) == as( mean( a ), "timeSpan" )) &&
     all( median( as( a, "timeDate" )) == as( median( a ), "timeDate" )) &&
@@ -82,7 +85,6 @@
     all( var( a ) == var( as( a, "timeSpan" ))) &&
     all.equal( cor( a, b ) , cor( as( a, "timeDate" ), as( b, "timeDate" ))) &&
     all.equal( cor( a, b ) , cor( as( a, "timeSpan" ), as( b, "timeSpan" ))))
-  })
 }
 
 {
