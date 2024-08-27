@@ -71,4 +71,7 @@ int time_opt_parse( SEXP in_obj, TIME_OPT_STRUCT *out_struct );
 void time_opt_sizes( TIME_OPT_STRUCT opt_struct, int *abb_size,
 		     int *full_size );
 
+/* internal functions */
+static void time_init(void);
+
 #endif /* TIMELIB_TIMEOBJ_H */

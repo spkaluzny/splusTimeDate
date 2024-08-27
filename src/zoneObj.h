@@ -156,4 +156,6 @@ typedef struct tzone_struct
 int find_zone_info( const char *name, SEXP zone_list, void **zone_info, 
 		    int *is_R );
 
+/* internal functions */
+static void zone_init(void);
 #endif /* TIMELIB_ZONEOBJ_H */
