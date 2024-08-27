@@ -47,8 +47,6 @@ the tolerance for matching positions.
 }
 
 }
-}
-}
 \value{
 an object like \code{pos}.
 }
