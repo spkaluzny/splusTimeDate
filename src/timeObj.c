@@ -57,7 +57,7 @@ static const char *DEFAULT_ZONE = "GMT";
    NOTE
 
 **********************************************************************/
-static void time_init()
+static void time_init(void)
 {
 
   if( time_initialized )

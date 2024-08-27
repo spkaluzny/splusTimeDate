@@ -48,7 +48,7 @@ static int r_zone_to_struct( SEXP obj, void **ret_struct );
    NOTE
 
  **********************************************************************/
-static void zone_init()
+static void zone_init(void)
 {
 
   if( zone_initialized )
