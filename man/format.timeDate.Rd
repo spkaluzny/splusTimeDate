@@ -24,6 +24,4 @@ input and output string formats.
   \code{\linkS4class{timeDate}}  class,
   \code{\linkS4class{timeSpan}}  class.
 }
-\keyword{sysdata}
-% docclass is data
-% Converted by mySd2Rd version 47442.
+\keyword{datasets}
