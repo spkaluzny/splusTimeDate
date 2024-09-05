@@ -14,19 +14,28 @@ sort.list(x, partial = NULL, na.last = TRUE, decreasing = FALSE,
 }
 \arguments{
   \item{x}{
-%%     ~~Describe \code{x} here~~
+a vector or an object of class \code{"numericSequence"}, \code{"positionsCalendar"}, and \code{"timeSpan"}.
 }
   \item{partial}{
-%%     ~~Describe \code{partial} here~~
+vector of indices for partial sorting. (Non-NULL values are not implemented.)
 }
   \item{na.last}{
-%%     ~~Describe \code{na.last} here~~
+for controlling the treatment of NAs.
+If TRUE, missing values in the data are put last;
+if FALSE, they are put first; if NA, they are removed.
 }
   \item{decreasing}{
-%%     ~~Describe \code{decreasing} here~~
+a logical value.
+If \code{TRUE} the sort order is decreasing .
+The default is \code{FALSE}.
 }
   \item{method}{
-%%     ~~Describe \code{method} here~~
+a character value that specifies the method to be used,
+partial matches are allowed.
+The default ("auto") implies "radix"
+for numeric vectors, integer vectors, logical vectors
+and factors with fewer than 231231 elements.
+Otherwise, it implies "shell".
 }
 }
 \value{
