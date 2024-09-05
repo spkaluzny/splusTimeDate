@@ -68,10 +68,10 @@ weekdays(dts)
 months(dts) 
 ## Produces barplot of # of days in x appearing on particular 
 ## weekday or month 
-# plot(weekdays(dts)) 
-# plot(months(dts)) 
+plot(weekdays(dts)) 
+plot(months(dts)) 
 ## Produces boxplots of julian date by weekday or month 
-# plot(weekdays(dts), x) 
-# plot(months(dts), x) 
+plot(weekdays(dts), x) 
+plot(months(dts), x) 
 }
 \keyword{chron}
