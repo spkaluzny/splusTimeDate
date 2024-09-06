@@ -2,7 +2,7 @@
 \alias{format.timeDate}
 \alias{format.timeSpan}
 \title{
-  Sample Formats
+  Lists of Sample Formats
 }
 \description{
 The \code{format.timeDate}  and \code{format.timeSpan} data sets are
