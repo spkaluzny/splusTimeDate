@@ -53,13 +53,13 @@ time portion, stored as a vector of the number of milliseconds since
 midnight, GMT.  The \code{groupVec} column names are \code{"julian.day"} and
 \code{"milliseconds"}, and the column classes are \code{integer}.
 
-The string in the \code{time.zome} slot must be one of the names 
+The string in the \code{time.zome} slot must be one of the names
 from the time zone list (see the \code{timeZoneList}
 documentation).  Because times are stored
 internally always in GMT, the time-zone string is used for
 printing and for converting to calendar times and dates
-(month/day/year, hour/minute/second/millisecond). You can change these directly. 
-You can also change the format directly, but we do not recommend changing the 
+(month/day/year, hour/minute/second/millisecond). You can change these directly.
+You can also change the format directly, but we do not recommend changing the
 \code{groupVec} slots directly.
 }
 \section{Time functions}{
@@ -70,11 +70,11 @@ respectively.  Alternatively, they can be created using the \code{timeDate} and
 \code{timeCalendar} functions.
 
 There are \code{as} relationships set up for \code{timeDate} objects to coerce them to
-and from \code{character}, \code{numeric}, and \code{integer}.  
+and from \code{character}, \code{numeric}, and \code{integer}.
 
 For numbers, the integer part is the julian day, and the fractional part is the
 fraction of the day given by the number of milliseconds divided by the
-number of milliseconds in a day, in GMT.   
+number of milliseconds in a day, in GMT. 
 
 Addition of numbers to time objects and subtraction of numerics from time objects works as
 though the time were converted to a number, the operation were
@@ -88,7 +88,7 @@ Multiplication, division, and other operations that do not
 make sense for times and dates (in the absence of an origin) result in
 numbers, via automatic coercion to class \code{numeric}.
 
-Note that while conversion to/from numerics is always in GMT, \code{floor} 
+Note that while conversion to/from numerics is always in GMT, \code{floor}
 and \code{ceiling} take account of
 the time zone to ouput time objects whose time is midnight in their
 time zone, and whose date is no later than the input time's date for
@@ -103,7 +103,7 @@ Various options are used by the time class, primarily for printing to and
 reading from character strings.  See \code{timeDateOptions} for documentation.
 }
 \section{Formatting}{
-The input and output format specifications look familiar to C and IMOX 
+The input and output format specifications look familiar to C and IMOX
 programmers and are patterned on the
 \code{strptime} function under Solaris.
 }
@@ -212,6 +212,10 @@ the \%, [, and ] characters, which must be matched in
 the input string.
 }
 }
+The default format for input is initially:\cr
+\code{"\%m[/][.]\%d[/][,]\%y [\%H[:\%M[:\%S[.\%N]]][\%p][[(]\%3Z[)]]]"}\cr
+This allows reading strings such as:\cr
+\code{"Jan 22 1997"}, \code{"January 22, 1997"}, \code{"1/22/97"}, \code{"1/22/97 2PM"}
 }
 \section{Output formats}{
 Output formats are used to convert time objects to character strings.
@@ -306,6 +310,12 @@ width, the field is replaced with asterix "*" characters to indicate
 overflow; character strings can be abbreviated by specifying short fields.
 }
 }
+The default format for output is initially:\cr
+\code{"\%02m/\%02d/\%Y \%02H:\%02M:\%02S.\%03N"}\cr
+Another choice would be:\cr
+\code{"\%A \%B \%d, \%Y \%I:\%02M \%p"}\cr
+These would result in the following output:\cr
+\code{"01/22/1997 14:34:45.025"} and \code{"Thursday January 22, 1997 2:34 PM"}\cr
 }
 \note{
 The calendar follows the conventions of the British Empire, which
@@ -322,19 +332,7 @@ because there is currenly no provision in the splusTimeDate package
 for keeping track of leap seconds.
 }
 \seealso{
-\code{\linkS4class{groupVec}}  class, \code{\linkS4class{timeSpan}}  class, \code{\link{timeDateOptions}},  \code{\link{timeDate}}   function, \code{\link{timeCalendar}},  \code{\link{format.timeDate}}.   
-}
-\examples{
-## The default format for input is initially:
-##    "\%m[/][.]\%d[/][,]\%y [\%H[:\%M[:\%S[.\%N]]][\%p][[(]\%3Z[)]]]"
-## This allows reading strings such as
-##    "Jan 22 1997", "January 22, 1997", "1/22/97", "1/22/97 2PM"
-## The default format for output is initially:
-##    "\%02m/\%02d/\%Y \%02H:\%02M:\%02S.\%03N"
-## Another choice would be
-##    "\%A \%B \%d, \%Y \%I:\%02M \%p"
-## These would result in the following output:
-##    "01/22/1997 14:34:45.025" and "Thursday January 22, 1997 2:34 PM"
+\code{\linkS4class{groupVec}} class, \code{\linkS4class{timeSpan}} class, \code{\link{timeDateOptions}}, \code{\link{timeDate}} function, \code{\link{timeCalendar}}, \code{\link{format.timeDate}}.
 }
 \keyword{chron}
 \keyword{classes}
