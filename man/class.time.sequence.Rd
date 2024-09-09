@@ -20,7 +20,6 @@
 \alias{show,timeSequence-method}
 \alias{summary,timeSequence-method}
 \alias{which.na,timeSequence-method}
-%
 \title{
   Time Sequence Class 
 }
@@ -89,5 +88,3 @@ for each operation.
 \code{\link{timeSequence}}  function.  
 }
 \keyword{classes}
-% docclass is function
-% Converted by mySd2Rd version 47442.

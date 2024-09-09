@@ -10,7 +10,6 @@
 \alias{coerce,positionsCalendar,timeEvent-method}
 \alias{show,timeEvent-method}
 \alias{summary,timeEvent-method}
-%
 \title{
   Event Class 
 }

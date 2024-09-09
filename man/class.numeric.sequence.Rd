@@ -39,7 +39,6 @@
 \alias{summary,numericSequence-method}
 \alias{unique,numericSequence-method}
 \alias{which.na,numericSequence-method}
-%
 \title{
   Numeric Sequence Class 
 }

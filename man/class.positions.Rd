@@ -54,7 +54,6 @@
 \alias{quarters,positionsCalendar-method}
 \alias{var,ANY,positionsCalendar-method}
 \alias{var,positionsCalendar,ANY-method}
-%
 \title{
   Virtual Classes for Time-Related Objects 
 }

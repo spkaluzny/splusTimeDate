@@ -11,7 +11,6 @@ Time and number alignment functions for package developers.
 .numalign(origpos, newpos, how, error.how, matchtol = 0)
 .timealign(origpos, newpos, how, error.how, matchtol = 0)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{origpos}{
 a vector of original position values.

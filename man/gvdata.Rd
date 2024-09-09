@@ -36,4 +36,3 @@ groupVecData(obj) <- list(c(1,2,3), c("a", "b", "c"))
 groupVecData(obj) 
 }
 \keyword{methods}
-% docclass is function

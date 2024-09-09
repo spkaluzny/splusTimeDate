@@ -322,5 +322,3 @@ timeZoneList(PDT8PST = timeZoneC("us/pacific"))
 timeZoneList(small.island = timeZoneR(offset=1800)) 
 }
 \keyword{chron}
-% docclass is function
-% Converted by mySd2Rd version 47442.

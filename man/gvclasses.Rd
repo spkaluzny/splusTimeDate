@@ -37,4 +37,3 @@ groupVecClasses(obj) <- c("numeric", "character")
 groupVecClasses(obj) 
 }
 \keyword{methods}
-% docclass is function

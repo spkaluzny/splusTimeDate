@@ -54,7 +54,6 @@
 \alias{timeFloor,timeSpan-method}
 \alias{var,ANY,timeSpan-method}
 \alias{var,timeSpan,ANY-method}
-%
 \title{
   Time Span Class
 }

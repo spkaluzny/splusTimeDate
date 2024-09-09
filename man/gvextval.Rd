@@ -57,5 +57,3 @@ validObject(obj)
 groupVecExtValid(obj, "nums", "numeric", TRUE) 
 }
 \keyword{methods}
-% docclass is function
-% Converted by mySd2Rd version 47442.

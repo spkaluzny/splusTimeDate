@@ -51,4 +51,3 @@ groupVecColumn(obj, "colname1") <- c(1, 2, 3)
 groupVecColumn(obj, "colname1") 
 }
 \keyword{methods}
-% docclass is function

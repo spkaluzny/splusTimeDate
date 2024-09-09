@@ -16,7 +16,6 @@
 \alias{summary,timeDate-method}
 \alias{shiftPositions,timeDate-method}
 \alias{timeConvert,timeDate-method}
-%
 \title{
   Time and Date Class
 }

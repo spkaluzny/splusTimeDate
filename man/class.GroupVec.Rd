@@ -21,7 +21,6 @@
 \alias{summary,groupVec-method}
 \alias{unique,groupVec-method}
 \alias{which.na,groupVec-method}
-%
 \title{
   Group Vector Class 
 }
