@@ -1,6 +1,7 @@
 \name{format.timeDate}
 \alias{format.timeDate}
 \alias{format.timeSpan}
+\docType{data}
 \title{
   Lists of Sample Formats
 }
