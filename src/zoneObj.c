@@ -19,6 +19,8 @@
 #include "timeUtils.h"
 #include "zoneObj.h"
 
+#include "sptd_utils.h"
+
 /* definitions needed for time zone classes */
 
 static SEXP name_slot;
@@ -140,7 +142,7 @@ int find_zone_info( const char *name, SEXP zone_list, void **zone_info,
      !(tmp_char = CHAR(STRING_ELT(tmp_data, 0))))
     return 0;
 
-  info_char =  acopy_string(tmp_char);
+  info_char =  sptd_acopy_string(tmp_char);
 
   *zone_info = (void *) info_char;
 
@@ -224,9 +226,14 @@ static int r_zone_to_struct( SEXP obj, void **ret_struct )
     return 1;
   } 
   /* sptr2 should be a data.frame */
+  #if defined(R_VERSION) && R_VERSION >= R_Version(4, 5, 0)
+  if(!Rf_isDataFrame( sptr2 ))
+    return 0;
+  #else
   if(!isFrame( sptr2 ))
     return 0;
-
+  #endif
+  
   /* extract the data */
   if( len != 14 )
     return 0;

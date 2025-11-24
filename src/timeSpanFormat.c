@@ -17,6 +17,8 @@
 
 #include "timeSpanFormat.h" 
 
+#include "sptd_utils.h"
+
 /* internal function declarations -- see end of file for defs/docs */
 static int out_width( char spec_char );
 static int output_one( char **out_buf, TIME_DATE_STRUCT td,
@@ -65,7 +67,7 @@ int tspan_format(const char *format_string, Sint julian, Sint ms,
     return 0;
 
   /* since R caches R string objects, need to copy input */
-  inpos = acopy_string(format_string);
+  inpos = sptd_acopy_string(format_string);
 
   outpos = ret_string;
 
@@ -168,8 +170,8 @@ int tspan_input( const char *input_string, const char *format_string,
   *julian = *ms = 0;
 
   /* since R caches R string objects, need to copy input */
-  in_str = acopy_string(input_string);
-  in_fmt = acopy_string(format_string);
+  in_str = sptd_acopy_string(input_string);
+  in_fmt = sptd_acopy_string(format_string);
 
   /* parse input with format */
   input_end = in_str + strlen( in_str );
@@ -217,7 +219,7 @@ int tspan_output_length(const char *format_string )
     return 0;
 
   /* since R caches R string objects, need to copy input */
-  pos = acopy_string(format_string);
+  pos = sptd_acopy_string(format_string);
 
   count = 0;
 

@@ -18,6 +18,8 @@
 
 #include "timeObj.h"
 
+#include "sptd_utils.h"
+
 /* definitions needed for time class */
 
 static SEXP time_class;
@@ -405,7 +407,7 @@ int time_get_pieces( SEXP time_obj, SEXP opt_obj,
     {
       tmpzone = CHAR( tmp );
       if( tmpzone ){
-	*zone = acopy_string(tmpzone);
+	*zone = sptd_acopy_string(tmpzone);
       } else{
 	UNPROTECT(2);
 	return 0;
@@ -646,7 +648,7 @@ int tspan_get_pieces( SEXP time_obj, Sint **day_vec, Sint **ms_vec,
     if( !tmp_str || !(*tmp_str)) /* bad character */
       return 0;
 
-    *format_string = acopy_string(tmp_str);
+    *format_string = sptd_acopy_string(tmp_str);
 
     return( tspan_output_length( tmp_str ));
   }

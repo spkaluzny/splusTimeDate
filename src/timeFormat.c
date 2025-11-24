@@ -18,6 +18,8 @@
 #include "timeFormat.h" 
 #include <stdio.h>
 
+#include "sptd_utils.h"
+
 /* internal function declarations -- see end of file for defs/docs */
 static int format_style(const char *format_string );
 static int old_to_new(const char *old_format, char **new_format, 
@@ -236,7 +238,7 @@ int mdyt_format( TIME_DATE_STRUCT td_input, const char *format_string,
     return 0;
 
   /* since R caches R string objects, need to copy input */
-  inpos = acopy_string(format_string);
+  inpos = sptd_acopy_string(format_string);
   outpos = ret_string;
 
   /* go through the format string and find specs */
@@ -338,7 +340,7 @@ int mdyt_input( const char *input_string, char *format_string,
 
   /* parse input with format */
 
-  inpos = acopy_string(input_string);
+  inpos = sptd_acopy_string(input_string);
   input_end = inpos + strlen(inpos);
 
   if( !parse_input( &inpos, &format_string, topt, td_output, '\0' ))
