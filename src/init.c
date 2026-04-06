@@ -70,8 +70,9 @@ R_init_splusTimeDate(DllInfo *dll)
     splusTimeDate_ZoneSym = install("time.zone");
 
     splusTimeDate_NS = R_FindNamespace(mkString("splusTimeDate"));
-    if(splusTimeDate_NS == R_UnboundValue)
-      error("missing 'splusTimeDate' namespace: should never happen");
+    /* Remove use of R_UnboundValue as per CRAN 2026-04 */
+    /* if(splusTimeDate_NS == R_UnboundValue)
+      error("missing 'splusTimeDate' namespace: should never happen"); */
 
 #ifdef DEBUG_splusTimeDate
     if(isEnvironment(splusTimeDate_NS))
